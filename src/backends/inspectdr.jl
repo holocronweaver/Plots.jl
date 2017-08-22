@@ -163,7 +163,7 @@ function _initialize_backend(::InspectDRBackend; kw...)
             2*InspectDR.GLYPH_SQUARE.x, InspectDR.GLYPH_SQUARE.y
         )
 
-        type InspecDRPlotRef
+        mutable struct InspecDRPlotRef
             mplot::Union{Void, InspectDR.Multiplot}
             gui::Union{Void, InspectDR.GtkPlot}
         end
